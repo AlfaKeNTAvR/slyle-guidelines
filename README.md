@@ -2,6 +2,8 @@
 
 
 ## Setting a Custom Git Commit Message Template
+By setting a custom Git commit message template, you can ensure that your commit messages follow a consistent format and contain all the necessary information for your team or collaborators to understand the changes being made in the repository.
+
 To set a custom Git commit message template for your repository, follow these steps:
 
 1. Download the *git_commit_template.txt* file.
