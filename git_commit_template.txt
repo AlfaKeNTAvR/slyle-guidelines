@@ -1,0 +1,66 @@
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+
+# Type can be one of the following:
+# - feat: A new feature
+# - fix: A bug fix
+# - docs: Documentation changes
+# - style: Changes that do not affect the meaning of the code (e.g. whitespace,
+#   formatting, missing semicolons)
+# - refactor: Changes that neither fix a bug nor add a feature (i.e. does not change
+#   functionality, but affect the way code works internally)
+# - perf: Changes that improve performance
+# - test: Adding missing tests or correcting existing tests
+# - chore: Changes to the build process or auxiliary tools and libraries such
+#   as documentation generation
+  
+# <scope> is an optional field that describes the module, component, or section of
+# the codebase that the commit is affecting. It can refer to a specific file,
+# function, or directory, and can help provide additional context and clarity for
+# the commit. If the scope is too wide to be specified, splitting the changes into
+# multiple commits should be considered.
+
+# <subject> should start with a capital letter and should not end with a period 
+# and should be as close to 50 symbols as possible. It should provide a brief, but 
+# descriptive, summary of the changes being made in the commit. It should be concise 
+# and clearly communicate the purpose of the commit, while also being specific enough 
+# to give other developers an idea of what the commit is about without having to read 
+# the entire commit message. 
+
+# <body> should include a more detailed description of the changes being made in
+# the commit, including reasons for changes, any relevant context, background, or 
+# technical details. This section should be wrapped at 72 characters.
+
+# <footer> is an optional section that can be used to include additional
+# information about the commit, such as references to related issues, pull
+# requests, or other commits. It can also be used to provide metadata about the
+# commit, such as the breaking changes, deprecations, or performance
+# improvements. This section should be wrapped at 72 characters.
+
+
+# Example 1:
+# feat(login-page): Add support for Google and Facebook login
+#
+# Added the ability for users to log in using their Google or Facebook accounts
+# on the login page.
+
+# Example 2:
+# fix(api): Fix issue with incorrect data being returned
+#
+# Fixed a bug in the API that was causing it to return incorrect data. The issue
+# was related to the handling of certain data types.
+
+# Example 3:
+# docs(readme): Update installation instructions
+#
+# Updated the installation instructions in the README file to include information
+# on how to set up the required dependencies.
+
+# Example 4:
+# style(css): Clean up formatting of navigation menu
+#
+# Changed the formatting of the navigation menu in the CSS file to improve
+# readability and consistency with the rest of the codebase.
