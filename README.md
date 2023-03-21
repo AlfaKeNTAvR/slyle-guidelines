@@ -13,7 +13,7 @@ To set a custom Git commit message template for your repository, follow these st
 3. Open a terminal and set the *commit.template* configuration option to the path of the template file by using the following command:
 
 <pre>
-git config --global commit.template /<path_to_the_folder>/.git_template/commit_template.txt 
+git config --global commit.template /path_to_the_folder/.git_template/commit_template.txt 
 </pre>
 
 Note that the *--global* option sets the configuration globally for all Git repositories on your machine. If you only want to set the configuration for the current repository, you can omit the *--global* option.
