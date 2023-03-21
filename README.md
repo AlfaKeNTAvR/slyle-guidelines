@@ -1,4 +1,4 @@
-# slyle-guidelines
+# slyle_guidelines
 
 
 ## Setting a Custom Git Commit Message Template
@@ -20,6 +20,29 @@ Note that the *--global* option sets the configuration globally for all Git repo
 
 The next time you create a commit, Git will use your custom template as the default commit message. You can still modify the message as needed before finalizing the commit.
 
+
+## Configuring a code formatter
+For code writing and documentation, we use the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html). To automate this process, we recommend using [yapf](https://github.com/google/yapf). The `based_on_style` should be set to `google` plus `dedent_closing_brackets: true`. To configure yapf in VSCode after installing, follow these steps:
+
+1. Press `Ctrl+Shift+P` to open the command palette.
+2. Search for the `settings.json` file and open it.
+3. Add the following lines to the file:
+
+<pre>
+    "python.formatting.provider": "yapf",
+    "editor.formatOnSave": true,
+    "python.formatting.yapfArgs": [
+        "--style={based_on_style: google, dedent_closing_brackets: true}"
+    ]
+</pre>
+
+These settings will set yapf with a modified Google style as the default formatter and run it after each save.
+
+4. To add a visual max line-width ruler to your VSCode, add this line:
+
+<pre>
+    "editor.rulers": [80],
+</pre>
 
 ## Docstrings
 Python docstrings are used to document functions, classes, and modules. There are a few different styles for docstrings, but one of the most commonly used is the "Google Style" docstring, which uses a specific format for documenting the inputs, outputs, and behavior of a function or method.
