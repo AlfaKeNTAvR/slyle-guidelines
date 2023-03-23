@@ -20,6 +20,28 @@ Note that the *--global* option sets the configuration globally for all Git repo
 
 The next time you create a commit, Git will use your custom template as the default commit message. You can still modify the message as needed before finalizing the commit.
 
+## Setting VScode as a default editor for git
+
+To set Visual Studio Code as the default commit message and conflict editor for Git, you can follow these steps:
+1. Open the command prompt by clicking on the Windows start menu, typing "cmd" (without quotes) in the search bar, and selecting the "Command Prompt" application.
+2. In the command prompt window, type the following commands and press Enter after each one:
+
+<pre>
+git config --global core.editor "code --wait"
+git config --global merge.tool vscode
+git config --global mergetool.vscode.cmd "code --wait $MERGED"
+</pre>
+
+The first command sets Visual Studio Code as the default editor for Git commit messages. The `--wait` flag tells Git to wait for the editor to be closed before proceeding with the commit.
+The second command sets Visual Studio Code as the default merge tool for Git conflicts.
+The third command configures the `vscode` merge tool to pass the `$MERGED` variable to Visual Studio Code when resolving conflicts.
+3. Verify that the configuration was set correctly by typing the following command and pressing Enter:
+
+<pre>
+git config --list --global
+</pre>
+
+This will display the global Git configuration, including the values you just set for the `core.editor` and `merge.tool` options.
 
 ## Configuring a code formatter
 For code writing and documentation, we use the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html). To automate this process, we recommend using [yapf](https://github.com/google/yapf). The `based_on_style` should be set to `google` plus `dedent_closing_brackets: true`. To configure yapf in VSCode after installing, follow these steps:
